@@ -11,6 +11,8 @@ __pycache__/
 *.zip
 
 # Trained model
+models/bertopic_complaints_model
+models/
 bertopic_complaints_model
 
 # Distribution / packaging
