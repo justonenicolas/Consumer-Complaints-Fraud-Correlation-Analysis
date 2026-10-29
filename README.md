@@ -38,7 +38,7 @@ import os
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 def load_dataset():
-    data_path = "data/processed/consumer_complaints.csv"
+    data_path = "data/raw_data/consumer_complaints.csv"
     if not os.path.exists(data_path):
         print("Fetching dataset from Kaggle...")
         api = KaggleApi()
