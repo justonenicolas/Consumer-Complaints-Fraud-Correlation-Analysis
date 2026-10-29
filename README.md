@@ -30,7 +30,7 @@ This project aims to bridge that gap by connecting unstructured text data with t
 To adhere to MLOps best practices and avoid bloating the Git repository with large binary files, datasets are decoupled from code versioning:
 
 * **Repository Scope:** Git tracks strictly source code, Jupyter notebooks, model configurations, and lightweight metadata.
-* **Large Data Assets:** The raw and enriched datasets (`consumer_complaints.csv`) are hosted publiclyon **Kaggle Datasets** under the project profile quoted at the end of this readme.
+* **Large Data Assets:** The raw and enriched datasets (`consumer_complaints.csv`, `creditcard_transactions.csv`) are hosted publicly on **Kaggle Datasets** under the project profile quoted at the end of this section.
 * **Automated Data Pipeline:** The data loading script utilizes the `kaggle` API wrapper to check, download, and extract the required dataset seamlessly upon runtime.
 
 ```python
@@ -38,7 +38,7 @@ import os
 from kaggle.api.kaggle_api_extended import KaggleApi
 
 def load_dataset():
-    data_path = "data/processed/consumer_complaints.csv"
+    data_path = "data/raw_data/consumer_complaints.csv"
     if not os.path.exists(data_path):
         print("Fetching dataset from Kaggle...")
         api = KaggleApi()
